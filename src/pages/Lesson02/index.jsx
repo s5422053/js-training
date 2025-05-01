@@ -4,7 +4,9 @@ import Chart from "../../components/Chart02";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  const sortedInput = input.toSorted((a,b) => b.count - a.count);
+
+  return sortedInput.slice(0,20); // ここを作りましょう！
 };
 
 const Lesson = () => {
