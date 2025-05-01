@@ -4,7 +4,14 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  let objInput = [];
+  /*
+  for(let i=0;input.length>i;i++){
+    objInput[i] = {name: input[i][0], count:input[i][1]}
+  };
+  */
+  objInput = input.map(([name,count])=>({name: name,count: count}));
+  return objInput; // ここを作りましょう！
 };
 
 const Lesson = () => {
